@@ -36,6 +36,8 @@ To start with, here's a brief overview of <a href="https://en.wikipedia.org/wiki
 
 <h3>Planet Formation: Dynamics</h3>
 
+<p> This is about the mass and orbit of the planets only.
+
 <p>
 It is thought that most solar systems form in roughly the same way: Galaxies have a lot of gas and 
 dust floating around in them. In more dense regions of gas and dust, a collapse can occur where the 
@@ -73,8 +75,8 @@ these problems, and so the conclusion reached is largely thought to be correct: 
 produced very many planetesimals that then interact gravitationally and through collisions to create the 
 final solar system.</p>
 
-<p>From here, the calculations get simpler. The system can be approximated by several thousand planetesimals,
-and an N-body simulation keeps track of how they interact over the next million years or so. An example of 
+<p><strike> The system can be approximated by several thousand planetesimals,
+and an N-body simulation keeps track of how they interact over the next million years or so. </strike>An example of 
 this type of simulation dates back to 2002: <a href="http://iopscience.iop.org/article/10.1086/344105/">
 Formation of Protoplanet Systems and Diversity of Planetary Systems</a>.
 </p>
@@ -93,30 +95,61 @@ phenomenon in more detail, before discussing the observation that systems with m
 circular orbits.
 </p>
 
+<p>Another important consideration is that beyond a certain point (which appears to be at about 2.7 
+astronomical units for our solar system according to wikipedia), water ice was stable in the protoplanetary disk,
+and this created very many more planetesimals beyond that point --- which encourages or is necessary for 
+the formation of giant planets (presumably because having more material from which to grow planets leads 
+to faster planet growth, and they can reach a size large enough to gather hydrogen gas sooner).
+ 
+
 <p>So where does this leave us in terms of making sure that planets are realistic? Really there are two answers
-depending on how much effort the reader is willing to go to: The high-effort answer is 
+depending on how much effort the reader is willing to go to: <strike>The high-effort answer is 
 that you can realistically simulate the solar system from the formation of thousands of planetesimals to
 the presence of between 1 and several handfuls of planets, and the resulting planets would 
-have a realistic history. This kind of simulation will take a long time to run, though, between days 
+have a realistic history.</strike> This kind of simulation will take a long time to run, though, between days 
 and months --- the dynamics need to be resolved down to timescales shorter than an hour, but the simulation
 has to run to perhaps half a million years. The low-effort answer is that the planet-formation phase doesn't 
-really impose much of a constraint on what's possible. Planets can move around. They can be on circular orbits or
+really impose much of a constraint on what's possible for a single planet. Planets can move around.
+They can be on circular orbits or
 they can be on eccentric orbits (more likely if there are fewer planets in your solar system). There
 is no fundamental reason why large planets can't be close in, far out, etc.
 </p>
 <p>
-However, there is always a big constraint that the system should be dynamically stable on timescales of millions
-of years. This is because a solar system that is fluctuating on fast timescales would eventually remove planets
-until it stabilised again ... the solar system effectively searches out stable configurations and stays in those
-for long periods of time. So if an intrepid explorer stumbles upon a 2 billion year old solar system, it is unlikely
+However, there is always a big constraint that any multi-planet system should be dynamically stable on 
+timescales of millions
+of years. This is because a solar system that is fluctuating on fast timescales would eventually remove 
+planets
+until it stabilised again ... the solar system effectively searches out stable configurations and stays 
+in those
+for long periods of time. So if an intrepid explorer stumbles upon a 2 billion year old solar system, 
+it is unlikely
 that that system would be undergoing 1000-year changes, unless the explorer had specifically sought out a 
 fluctuating system.
 </p>
 
+<p>Summary</p>
+<ul>
+<li>Our understanding of solar system formation places few constraints on the mass or orbit of planets around
+realistic solar systems. It seems that it is possible for planets of any size to be anywhere.</li>
+<li>It is important, though, that a realistic solar system is dynamically stable on timescales of millions of years.</li>
+</ul>
 
 </div>
-<h3>How to keep it realistic</h3>
 
+
+<div style='background-color:#FAA;'>
+<h3>Planet Formation: Chemical composition</h3>
+<p>Our solar system tends to have rocky planets near the sun and icy planets further out. 
+This is something that is somewhat important for a solar system to be believable. The story 
+actually starts in the first stages of planet formation when grains of dust come together to form pebbles: 
+Ice sublimes when it gets to too warm, and so the pebbles that form in the inner solar system are largely rocky.
+(see wikipedia's <a href="https://en.wikipedia.org/wiki/Frost_line_(astrophysics)">frost line</a>). 
+The same goes for CO<sub>2</sub> ice. So planetesimals that start closer in tend to be depleted in 
+elements that prefer to be in chemicals with low boiling points.
+</p>
+<p>
+A 
+</div>
 <h3>Examples</h3>
 
 </body>
