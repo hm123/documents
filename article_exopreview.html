@@ -9,6 +9,7 @@ scrap:
 mineral richness --- differentiation.
 http://iopscience.iop.org/article/10.1086/344105
 
+update simplectic integrator.
 
 <p>
 How can you create a fictional planet or solar system and keep it believable? Especially in hard science fiction, 
@@ -72,14 +73,31 @@ giants.
 
 <p>It is thought that instabilities and fluctuations within protoplanetary disks can bypass both of 
 these problems, and so the conclusion reached is largely thought to be correct: The early solar system 
-produced very many planetesimals that then interact gravitationally and through collisions to create the 
+produced very many planetesimals (rocks of about 1km or a bit more) that then interact gravitationally 
+and through collisions to create the 
 final solar system.</p>
 
-<p><strike> The system can be approximated by several thousand planetesimals,
-and an N-body simulation keeps track of how they interact over the next million years or so. </strike>An example of 
-this type of simulation dates back to 2002: <a href="http://iopscience.iop.org/article/10.1086/344105/">
+<p>A widely-cited paper from 2002 describes a simulation of the subsequent process: a mass of planetesimals 
+gradually merging into a small number of planets <a href="http://iopscience.iop.org/article/10.1086/344105/">
 Formation of Protoplanet Systems and Diversity of Planetary Systems</a>.
 </p>
+<p>To summarise the paper:
+<ul>
+<li>They start with a disk of dust and gas which takes two parameters: the disk mass and a shape parameter.</li>
+<li>There are initially between 5000 and 10000 planetesimals, initially placed to approximate the disk mass and 
+shape: The disk is assumed (I think) to be mainly lumped into planetesimals at the start of the simulation.
+The planetesimals all have roughly the same mass.</li>
+<li>Planetesimals' trajectories are calculated numerically, taking into account the N<sup>2</sup> gravitational 
+interactions between them</li>
+<li>When the planetesimals are within a certain radius, they accrete / merge.
+<li>The colision radius of each planetesimal is increased by a factor of 6 in order to speed up the accretion process by
+an expected factor of 36.</li>
+<li>I think the planetesimals only grow through colisions with each other.</li>
+<li>The simulation runs for 400 000 years --- which would model 14 million years.</li>
+<li>They successfully show a realistic 
+</ul>
+</p>
+
 
 <p>The results, if done properly, are a number of planets, spaced out reasonably similarly to in our solar 
 system, and all on relatively normal orbits. The interaction between many small planetesimals and larger 
